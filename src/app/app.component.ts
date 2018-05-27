@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component }       from '@angular/core';
+ 
+import { QuestionService } from './question.service';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div>
+      <h2>Dynamic Forms for Intact </h2>
+      <app-dynamic-form ></app-dynamic-form>
+    </div>
+  `,
+  providers:  [QuestionService]
 })
 export class AppComponent {
-  title = 'app';
+  questions: any[];
+
 }
